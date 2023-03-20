@@ -8,5 +8,5 @@ func main(){
 	r.GET("/jxl" , func (c *gin.Context){
 		c.JSON(200 , gin.H{"message": "pong"})
 	})
-	r.Run()
+	r.Run(":8899")
 }
