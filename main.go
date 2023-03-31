@@ -1,12 +1,12 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"blog-gin/internal/routers"
+	//"github.com/gin-gonic/gin"
+)
 
 
-func main(){
-	r := gin.Default()
-	r.GET("/jxl" , func (c *gin.Context){
-		c.JSON(200 , gin.H{"message": "pong"})
-	})
+func main() {
+	r := routers.NewRouter()
 	r.Run(":8899")
 }
